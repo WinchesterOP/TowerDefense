@@ -4,7 +4,9 @@ Engine: Unity
 
 Idee: Tower Defense
 
-Roadmap:
+##Roadmap
+
+###Erste Schritte
 
 - Spielfeld bauen (Strecke, Baubereich, Start, Ziel)
 - Feld auf dem Objekte platziert werden können
@@ -21,7 +23,7 @@ Roadmap:
 - Türme aufleveln
 - unterschiedliche Wellen
 
-
+###Ideen für später
 
 - logging 
 - Konfigdateien (Spache, Auflösung)
