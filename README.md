@@ -8,8 +8,8 @@ Idee: Tower Defense
 
 ### Erste Schritte
 
-- [] Spielfeld bauen (Strecke, Baubereich, Start, Ziel)
-- [] Feld auf dem Objekte platziert werden können
+- [ ] Spielfeld bauen (Strecke, Baubereich, Start, Ziel)
+- [x] Feld auf dem Objekte platziert werden können
 - [] Turm auf ein Objekt schießt
 - [] Gegner mit Lebenbalken
 - [] Schüsse verursachen Schaden beim Gegner
