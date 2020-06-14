@@ -26,6 +26,6 @@ Idee: Tower Defense
 ### Ideen für später
 
 - logging 
-- Konfigdateien (Spache, Auflösung)
-- Continous Integration
-- Docker 
+- Konfigdateien (Sprache, Auflösung)
+- Patch-Dateien
+- Installationsdateien
