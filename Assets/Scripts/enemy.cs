@@ -3,7 +3,7 @@
 public class enemy : MonoBehaviour
 {
 	public float speed = 10f; //Geschwindigkeitsvariable
-	public float deltaDistance = 0.6f;
+	public float deltaDistance = 0.2f; // Abstand zu den Waypoints
 
 	private Transform target; //Variable um das nächste Ziel anzuwählen
 	private int waypointIndex = 0; //Temp-Zähler
