@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class TreeTurret : MonoBehaviour
 {
+    [Header("Attributes")]
+    public float range = 30f; // Reichweite des Towers
+    public float fireRate = 1f;
+    private float fireCountDown = 0f;
+
+    [Header("Unity Setup Fields")]
     public Transform target; // aktuelles Ziel
+    public Transform firePoint;
+    public GameObject bulletPrefab;
     public string enemyTag = "Enemy";
 
-    public float range = 30f; // Reichweite des Towers
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,19 +47,37 @@ public class TreeTurret : MonoBehaviour
         if ((nearestEnemy != null) && (shortestDistance <= range))
         {
             target = nearestEnemy.transform;
-            Debug.Log("ich bin in der IF");
         } else
         {
             target = null;
-            Debug.Log("Kein IF");
         }
     }
+
+    void Shoot()
+    {
+        GameObject bulletGo = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); // erstelltest Objekt wird als GameObject gespeichert
+        Bullet bullet = bulletGo.GetComponent<Bullet>();
+
+        if (bullet != null)
+        {
+            bullet.Seek(target);
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
     {
         if (target == null) 
             return;
+
+        if (fireCountDown <= 0f)
+        {
+            Shoot();
+            fireCountDown = 1f / fireRate;
+        }
+
+        fireCountDown -= Time.deltaTime;
     }
 
     private void OnDrawGizmosSelected()
